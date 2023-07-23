@@ -15,7 +15,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NonCopyable\NonCopyable.csproj" />
+    <ProjectReference Include="..\NonCopyable.TestTypes\NonCopyable.TestTypes.csproj" />
+    <ProjectReference Include="..\NonCopyable\NonCopyable.csproj">
+      <OutputItemType>Analyzer</OutputItemType>
+    </ProjectReference>
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>

@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
+using System.Reflection;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
+using NonCopyable.Test.TestTypes;
 using TestHelper;
 using Xunit;
 
@@ -36,7 +38,11 @@ namespace NonCopyable.Test
             get
             {
                 foreach (var r in base.References) yield return r;
-                yield return MetadataReference.CreateFromFile(GetType().Assembly.Location);
+                yield return MetadataReference.CreateFromFile(typeof(MyNonCopyable).Assembly.Location);
+                foreach(var name in typeof(MyNonCopyable).Assembly.GetReferencedAssemblies())
+                {
+                    yield return MetadataReference.CreateFromFile(Assembly.Load(name).Location);
+                }
             }
         }
     }

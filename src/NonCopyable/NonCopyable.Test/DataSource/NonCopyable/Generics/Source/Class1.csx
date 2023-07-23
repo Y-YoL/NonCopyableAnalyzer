@@ -30,7 +30,7 @@ static class Ex1
     public static T Constraint<[NonCopyable] T>(ref this T x) where T : struct
     {
         var t = x; // ❌
-        return t; // ❌
+        return t;
     }
 }
 

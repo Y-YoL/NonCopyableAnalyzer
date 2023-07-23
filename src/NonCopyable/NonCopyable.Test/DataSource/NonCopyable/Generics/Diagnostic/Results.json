@@ -8,14 +8,6 @@
     "message-args": [ "T" ]
   },
   {
-    "id": "NoCopy05",
-    "sevirity": "Error",
-    "line": 33,
-    "column": 16,
-    "path": "Class1.csx",
-    "message-args": [ "T" ]
-  },
-  {
     "id": "NoCopy04",
     "sevirity": "Error",
     "line": 43,
