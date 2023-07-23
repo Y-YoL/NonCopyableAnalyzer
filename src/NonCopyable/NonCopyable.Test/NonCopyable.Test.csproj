@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\NonCopyable.TestTypes\NonCopyable.TestTypes.csproj" />
     <ProjectReference Include="..\NonCopyable\NonCopyable.csproj">
       <OutputItemType>Analyzer</OutputItemType>
     </ProjectReference>
