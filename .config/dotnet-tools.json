@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "isRoot": true,
+  "tools": {
+    "dotnet-xunit-to-junit": {
+      "version": "4.0.0",
+      "commands": [
+        "dotnet-xunit-to-junit"
+      ]
+    }
+  }
+}
