@@ -17,6 +17,7 @@ jobs:
     - uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
+    - run: dotnet sln ./src/NonCopyable.sln remove ./src/NonCopyable/NonCopyable.Vsix/NonCopyable.Vsix.csproj
     - run: dotnet restore ./src/NonCopyable.sln
     - run: dotnet build ./src/NonCopyable.sln --no-restore
     - run: dotnet test ./src/NonCopyable.sln --no-build --verbosity normal
