@@ -20,6 +20,7 @@ Allow usage of non-copyable in conditional expressions (? :).
 Treat return statement as having move semantics for locals and parameters.</PackageReleaseNotes>
     <PackageTags>NonCopyable, analyzers</PackageTags>
     <NoPackageAnalysis>true</NoPackageAnalysis>
+    <IsRoslynComponent>true</IsRoslynComponent>
   </PropertyGroup>
    
   <ItemGroup>
