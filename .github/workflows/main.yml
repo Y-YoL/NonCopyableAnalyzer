@@ -20,4 +20,8 @@ jobs:
     - run: dotnet sln ./src/NonCopyable.sln remove ./src/NonCopyable/NonCopyable.Vsix/NonCopyable.Vsix.csproj
     - run: dotnet restore ./src/NonCopyable.sln
     - run: dotnet build ./src/NonCopyable.sln --no-restore
-    - run: dotnet test ./src/NonCopyable.sln --no-build --verbosity normal
+    - run: dotnet test ./src/NonCopyable.sln --no-build -l:xunit
+    - uses: test-summary/action@v2
+      with:
+        paths: "**/TestResults/TestResults.xml"
+      if: always()
